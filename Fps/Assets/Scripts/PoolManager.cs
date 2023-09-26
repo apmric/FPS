@@ -6,11 +6,7 @@ using UnityEngine.UIElements;
 
 public enum PoolFlag
 {
-    target,
-    bullet,
-    effect,
-    hitEffect,
-    shootEffect,
+    bullet
 }
 
 public class PoolManager : MonoBehaviour

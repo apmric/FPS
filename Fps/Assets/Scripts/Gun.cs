@@ -30,6 +30,7 @@ public class Gun : MonoBehaviour
     }
 
     Transform cam;
+
     RaycastHit hit;
 
     void Awake()
@@ -52,9 +53,6 @@ public class Gun : MonoBehaviour
 
         Physics.Raycast(cam.position, cam.forward, out hit, 1000);
         temp.transform.LookAt(hit.point);
-
-        GameObject shootEffect = GameManager.Instance.pool.GetPool(PoolFlag.shootEffect);
-        shootEffect.transform.position = bulletPos.position;
     }
 
     // ÃÑ ÇÑ ¹ß ½î±â()

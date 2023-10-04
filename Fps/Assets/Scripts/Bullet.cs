@@ -28,6 +28,13 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        IHit hit = collision.gameObject.GetComponent<IHit>();
+
+        if (hit == null)
+            return;
+
+        hit.OnHit(damage);
+
         ReturnObject();
     }
 
